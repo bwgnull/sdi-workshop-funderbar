@@ -11,9 +11,9 @@
       it('are the parameters equal ', function() {
         //replace FILL_ME_IN with true or false
         expect(_.same(1,1)).to.equal(true);
-        expect(_.same('string','string')).to.equal(FILL_ME_IN);
-        expect(_.same(13,true)).to.equal(FILL_ME_IN);
-        expect(_.same(false, undefined)).to.equal(FILL_ME_IN);
+        expect(_.same('string','string')).to.equal(true);
+        expect(_.same(13,true)).to.equal(false);
+        expect(_.same(false, undefined)).to.equal(false);
       });
     });
 
@@ -22,8 +22,8 @@
       it('is the first parameter greater than the second', function() {
         //replace FILL_ME_IN with true or false
         expect(_.greater(1,1)).to.equal(false);
-        expect(_.greater(37,12)).to.equal(FILL_ME_IN);
-        expect(_.greater(167,167)).to.equal(FILL_ME_IN);
+        expect(_.greater(37,12)).to.equal(true);
+        expect(_.greater(167,167)).to.equal(false);
       });
     });
 
@@ -32,8 +32,8 @@
       it('is the first parameter less than the second', function() {
         //replace FILL_ME_IN with true or false        
         expect(_.lessThan(1,1)).to.equal(false);
-        expect(_.lessThan(37, 88)).to.equal(FILL_ME_IN);
-        expect(_.lessThan(167,144)).to.equal(FILL_ME_IN);
+        expect(_.lessThan(37, 88)).to.equal(true);
+        expect(_.lessThan(167,144)).to.equal(false);
       });
     });
 
@@ -41,11 +41,11 @@
 
       it('is the input Truthy or Falsy', function() {
         //replace FILL_ME_IN with true or false
-        expect(_.falsyOrTruthy(0)).to.equal(false);
-        expect(_.falsyOrTruthy(undefined)).to.equal(FILL_ME_IN);
-        expect(_.falsyOrTruthy(1)).to.equal(FILL_ME_IN);
-        expect(_.falsyOrTruthy(NaN)).to.equal(FILL_ME_IN);
-        expect(_.falsyOrTruthy("")).to.equal(FILL_ME_IN);
+        expect(_.falsyOrTruthy(0)).to.equal(true);
+        expect(_.falsyOrTruthy(undefined)).to.equal(true);
+        expect(_.falsyOrTruthy(1)).to.equal(true);
+        expect(_.falsyOrTruthy(NaN)).to.equal(true);
+        expect(_.falsyOrTruthy("")).to.equal(true);
       });
     }); 
 
